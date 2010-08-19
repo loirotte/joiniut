@@ -298,12 +298,12 @@
 
 \titleformat{\chapter}[display]%
 %	{\filleft\normalfont\bfseries\Huge}
-	{\filleft\normalfont\bfseries\fontsize{36}{36}\selectfont}
+	{\filleft\sffamily\bfseries\fontsize{36}{36}\selectfont}
 	{\begin{tikzpicture}[overlay]
 	% Rectangle
       \draw[rounded corners=15pt,draw=white,fill,top color=color1!30, bottom color=color1] (-3.5cm,1.75cm) rectangle (0.5cm,-2.25cm);
-      \draw[color=white] (-1.4cm,0cm) node {\fontsize{54}{54}\fatfont\thechapter};
-      \draw[color=black] (-1.47cm,1.12cm) node {\small{}CHAPITRE};
+      \draw[color=white] (-1.4cm,0cm) node {\sffamily\fontsize{54}{54}\fatfont\thechapter};
+      \draw[color=black] (-1.47cm,1.12cm) node {\sffamily\small{}CHAPITRE};
     \end{tikzpicture}}%
 	{8pt}{#1}{}
 
@@ -326,17 +326,17 @@
 % 	{0pt}{#1}{}
 
 \titleformat{\section}[display]%
-	{\bfseries\LARGE }
+	{\bfseries\LARGE\sffamily }
 	{\begin{tikzpicture}[overlay]
       \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-0.7cm,-0.2cm) rectangle (0.9cm,-1.4cm);
       \draw[color=white] (0.11cm,-0.95cm) node { \fontsize{32}{32}\fatfont{}\thesection };
-      \draw[color=color3!50] (0.11cm,-0.1cm) node {\tiny{}SECTION};
+      \draw[color=color3!50] (0.11cm,-0.1cm) node {\sffamily\tiny{}SECTION};
     \end{tikzpicture}}%
 	{0cm}{\hspace*{1cm}#1}{}
 
 
 \titleformat{\subsection}%
-	{\bfseries\Large}%
+	{\bfseries\Large\sffamily}%
 	{}%
 	{0pt}{%\emboiter[8pt]{color2}{
 		\begin{tikzpicture}[baseline=-0.14cm]
@@ -348,9 +348,9 @@
 
 \titleformat{name=\subsubsection}[hang]%
 %	{\sffamily\large}%
-	{\large}%
+	{\small\sffamily}%
 	{}%
-	{10pt}{\emboiter[8.5pt,top color=lightgray, bottom color=lightgray]{lightgray}{
+	{10pt}{\emboiter[5pt,top color=lightgray, bottom color=lightgray]{lightgray}{
 		\begin{tikzpicture}[overlay,baseline=-0.14cm]
 			\node[circle, inner sep=3pt, draw=gray, fill, color=gray, text=white]{\bfseries\thesubsubsection};
 		\end{tikzpicture}\quad\thinspace #1
@@ -358,9 +358,9 @@
 	
 \titleformat{name=\subsubsection,numberless}[hang]%
 %	{\sffamily\large}%
-	{\large}%
+	{\small\sffamily}%
 	{}%
-	{10pt}{\emboiter[8.5pt,top color=lightgray, bottom color=lightgray]{lightgray}{#1}}{}
+	{10pt}{\emboiter[5pt,top color=lightgray, bottom color=lightgray]{lightgray}{#1}}{}
 
 
 
