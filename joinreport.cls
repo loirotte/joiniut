@@ -15,6 +15,7 @@
 
 % On se base sur le report de KOMA-Script
 \LoadClass[a4paper,11pt]{scrreprt}
+%\LoadClass[a4paper,11pt]{scrbook}
 
 % Des fontes qu'il faut charger de suite pour ne pas avoir d'erreurs
 % plus tard dans la compilation (même si elle ne sont pas utilisées
@@ -198,17 +199,16 @@
 % }
 \newcommand{\entetespiedspage}{%
 	\fancyhead[L,C,R]{}
-        \fancyhead[LE]{\small\textcolor{lightgray}\leftmark}
-        \fancyhead[RO]{\small\textcolor{lightgray}\rightmark}
 	\fancyfoot[L,C,R]{}
 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
-	\fancyfoot[RO,LE]{\hspace*{-1.4cm}\piedpage{\thepage}\hspace*{-1.4cm}}%
+	\fancyfoot[RO]{\small\hspace*{-1.4cm}\textbf{\rightmark~~|~~\thepage}\hspace*{-1.4cm}}%
+	\fancyfoot[LE]{\small\hspace*{-1.4cm}\textbf{\thepage~~|~~\leftmark}\hspace*{-1.4cm}}%
 }
 \newcommand{\entetespiedspageplain}{%
 	\fancyhead[L,C,R]{}
 	\fancyfoot[L,C,R]{}
 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
-	\fancyfoot[RO,LE]{\hspace*{-1.4cm}\piedpage{\thepage}\hspace*{-1.4cm}}%
+	\fancyfoot[RO,LE]{\small\hspace*{-1.4cm}\textbf{\thepage}\hspace*{-1.4cm}}%
 }
 
 % On enlève tout en haut, on remplace par le nom du chapitre.
@@ -218,10 +218,10 @@
 \pagestyle{fancy}
 % Pas de titre de chapitre en majuscule
 \renewcommand{\chaptermark}[1]{%
-\markboth{{\hspace*{-1.4cm}\chaptername\ \thechapter. #1}}{}}
+\markboth{{\chaptername\ \thechapter. #1}}{}}
 % Pas de titre de section en majuscule
 \renewcommand{\sectionmark}[1]{%
-\markright{{Section\ \thesection. #1\hspace*{-1.4cm}}}{}}
+\markright{{Section\ \thesection. #1}}{}}
 \entetespiedspage
 
 
