@@ -201,14 +201,14 @@
 	\fancyhead[L,C,R]{}
 	\fancyfoot[L,C,R]{}
 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
-	\fancyfoot[RO]{\small\hspace*{-1.4cm}\textbf{\rightmark~~|~~\thepage}\hspace*{-1.4cm}}%
-	\fancyfoot[LE]{\small\hspace*{-1.4cm}\textbf{\thepage~~|~~\leftmark}\hspace*{-1.4cm}}%
+	\fancyfoot[RO]{\fatfont\footnotesize\hspace*{-1.3cm}\rightmark~~|~~\thepage\hspace*{-1.3cm}}%
+	\fancyfoot[LE]{\fatfont\footnotesize\hspace*{-1.3cm}\thepage~~|~~\leftmark\hspace*{-1.3cm}}%
 }
 \newcommand{\entetespiedspageplain}{%
 	\fancyhead[L,C,R]{}
 	\fancyfoot[L,C,R]{}
 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
-	\fancyfoot[RO,LE]{\small\hspace*{-1.4cm}\textbf{\thepage}\hspace*{-1.4cm}}%
+	\fancyfoot[RO,LE]{\fatfont\footnotesize\hspace*{-1.3cm}\textbf{\thepage}\hspace*{-1.3cm}}%
 }
 
 % On enlève tout en haut, on remplace par le nom du chapitre.
@@ -415,3 +415,4 @@
 	{{\sffamily\contentslabel{1.3em}}}
 	{\hspace*{-1.3em}}
 	{\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{gray}{\contentspage}}
+
