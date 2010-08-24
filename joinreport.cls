@@ -124,6 +124,7 @@
 %% Couleurs
 %%
 \definecolor{colortt}{RGB}{245,190,0}
+\definecolor{colorcomment}{RGB}{130,130,130}
 \definecolor{color1}{RGB}{190,190,190}
 \definecolor{color2}{RGB}{255,190,0}
 \definecolor{color3}{RGB}{104,142,255}
@@ -142,8 +143,8 @@
         inputencoding=utf8,
         extendedchars=false,
 	basicstyle=\ttfamily\upshape,
-	stringstyle=\textcolor{codestring},
-	commentstyle=\textcolor{color1},
+	stringstyle=\bfseries\textcolor{codestring},
+	commentstyle=\textcolor{colorcomment},
         keywordstyle=\bfseries,
 	tabsize=8,
 	numbers=left,
