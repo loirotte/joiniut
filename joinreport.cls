@@ -125,6 +125,7 @@
 %%
 \definecolor{colortt}{RGB}{245,190,0}
 \definecolor{colorcomment}{RGB}{130,130,130}
+\definecolor{colortoc}{RGB}{100,100,100}
 \definecolor{color1}{RGB}{190,190,190}
 \definecolor{color2}{RGB}{255,190,0}
 \definecolor{color3}{RGB}{104,142,255}
@@ -337,7 +338,7 @@
 
 
 \titleformat{\subsection}%
-	{\bfseries\Large\sffamily}%
+	{\bfseries\fontsize{13}{13}\sffamily}%
 	{}%
 	{0pt}{%\emboiter[8pt]{color2}{
 		\begin{tikzpicture}[baseline=-0.14cm]
@@ -409,11 +410,15 @@
 % La table des matières s'appelle sommaire
 \addto\captionsfrench{\renewcommand{\contentsname}{Sommaire}}
 
-\titlecontents{section}
-[3.5em] {} {{\sffamily\contentslabel{1.3em}}\bfseries} {\hspace*{-1.3em}\bfseries} {\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{gray}{\contentspage}}
-\titlecontents{subsection} [4.5em]
-	{} % note that 3.8 = 1.5 + 2.3
-	{{\sffamily\contentslabel{1.3em}}}
-	{\hspace*{-1.3em}}
-	{\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{gray}{\contentspage}}
+\titlecontents{section} [2.85em]
+{}
+{{\sffamily\contentslabel{1.3em}}}
+{\hspace*{-1.3em}}
+{\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{colortoc}{\contentspage}}
+
+\titlecontents{subsection} [4.2em]
+{} 
+{{\sffamily\contentslabel{1.3em}}}
+{\hspace*{-1.3em}}
+{\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{colortoc}{\contentspage}}
 
