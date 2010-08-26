@@ -127,6 +127,7 @@
 \definecolor{colorcomment}{RGB}{130,130,130}
 \definecolor{colortoc}{RGB}{100,100,100}
 \definecolor{colorfoot}{RGB}{100,100,100}
+\definecolor{colorgrey}{RGB}{100,100,100}
 \definecolor{color1}{RGB}{190,190,190}
 \definecolor{color2}{RGB}{255,190,0}
 \definecolor{color3}{RGB}{104,142,255}
