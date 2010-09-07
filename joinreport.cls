@@ -307,7 +307,7 @@
 	% Rectangle
       \draw[rounded corners=15pt,draw=white,fill,top color=color1!30, bottom color=color1] (-3.5cm,1.75cm) rectangle (0.5cm,-2.25cm);
       \draw[color=white] (-1.4cm,0cm) node {\sffamily\fontsize{54}{54}\fatfont\thechapter};
-      \draw[color=black] (-1.47cm,1.12cm) node {\sffamily\small{}CHAPITRE};
+      \draw[color=black] (-1.47cm,1.12cm) node {\sffamily\small{}\MakeUppercase{\chaptertitlename}};
     \end{tikzpicture}}%
 	{8pt}{#1}{}
 
