@@ -377,13 +377,14 @@
 \renewcommand{\and}{\\}
 \begin{titlepage}
 		\vfill
-		\@date
+		~
 		\vfill
 		\begin{flushright}
 		\emboiter[30pt, inner sep=1cm,text width=14cm, text=white, top color=lightgray, bottom color=lightgray, draw=lightgray, text=white]{colortitle}{\begin{flushright}\fontsize{36}{36}\bfseries\sffamily\@title\end{flushright}}
 		\end{flushright}
 		\vfill
 		\begin{doublespace}{\LARGE\authorfont\@author}\end{doublespace}
+		\@date
 \end{titlepage}
 \renewcommand{\and}{ • }
 }
