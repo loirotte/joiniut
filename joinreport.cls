@@ -132,7 +132,8 @@
 \definecolor{color1}{RGB}{190,190,190}
 \definecolor{color2}{RGB}{255,190,0}
 \definecolor{color3}{RGB}{104,142,255}
-\definecolor{codebackground}{RGB}{248,248,248}
+%\definecolor{codebackground}{RGB}{248,248,248}
+\definecolor{codebackground}{RGB}{230,230,230}
 \definecolor{codekeywords}{RGB}{59,40,192}
 \definecolor{codestring}{RGB}{70,123,191}
 
