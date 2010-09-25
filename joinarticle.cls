@@ -133,6 +133,7 @@
 \definecolor{color3}{RGB}{104,142,255}
 %\definecolor{codebackground}{RGB}{248,248,248}
 \definecolor{codebackground}{RGB}{230,230,230}
+\definecolor{backgroundtitle}{RGB}{230,230,230}
 \definecolor{codekeywords}{RGB}{59,40,192}
 \definecolor{codestring}{RGB}{70,123,191}
 
@@ -301,16 +302,16 @@
 \def\thesubsection{\arabic{subsection}}
 \def\thesubsubsection{\alph{subsubsection}}
 
-\titleformat{\chapter}[display]%
-%	{\filleft\normalfont\bfseries\Huge}
-	{\filleft\sffamily\bfseries\fontsize{36}{36}\selectfont}
-	{\begin{tikzpicture}[overlay]
-	% Rectangle
-      \draw[rounded corners=15pt,draw=white,fill,top color=color1!30, bottom color=color1] (-3.5cm,1.75cm) rectangle (0.5cm,-2.25cm);
-      \draw[color=white] (-1.4cm,0cm) node {\sffamily\fontsize{54}{54}\fatfont\thechapter};
-      \draw[color=black] (-1.47cm,1.12cm) node {\sffamily\small{}\MakeUppercase{\chaptertitlename}};
-    \end{tikzpicture}}%
-	{8pt}{#1}{}
+% \titleformat{\chapter}[display]%
+% %	{\filleft\normalfont\bfseries\Huge}
+% 	{\filleft\sffamily\bfseries\fontsize{36}{36}\selectfont}
+% 	{\begin{tikzpicture}[overlay]
+% 	% Rectangle
+%       \draw[rounded corners=15pt,draw=white,fill,top color=color1!30, bottom color=color1] (-3.5cm,1.75cm) rectangle (0.5cm,-2.25cm);
+%       \draw[color=white] (-1.4cm,0cm) node {\sffamily\fontsize{54}{54}\fatfont\thechapter};
+%       \draw[color=black] (-1.47cm,1.12cm) node {\sffamily\small{}\MakeUppercase{\chaptertitlename}};
+%     \end{tikzpicture}}%
+% 	{8pt}{#1}{}
 
 % \titleformat{\section}[display]%
 % 	{\bfseries\LARGE }
@@ -333,11 +334,16 @@
 \titleformat{\section}[display]%
 	{\bfseries\LARGE\sffamily }
 	{\begin{tikzpicture}[overlay]
-      \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-0.7cm,-0.2cm) rectangle (0.9cm,-1.4cm);
-      \draw[color=white] (0.11cm,-0.95cm) node { \fontsize{32}{32}\fatfont{}\thesection };
-      \draw[color=color3!50] (0.11cm,-0.1cm) node {\sffamily\tiny{}SECTION};
+      \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-0.5cm,-0.4cm) rectangle (0.7cm,-1.2cm);
+      \draw[color=white] (0.11cm,-0.80cm) node { \fontsize{22}{22}\fatfont{}\thesection };
+      \draw[color=color3!50] (0.11cm,-0.1cm) node {};
     \end{tikzpicture}}%
 	{0cm}{\hspace*{1cm}#1}{}
+
+\titleformat{name=\section,numberless}[display]%
+	{\bfseries\LARGE\sffamily }
+	{}%
+	{0cm}{#1}{}
 
 
 \titleformat{\subsection}%
@@ -349,6 +355,11 @@
 		\end{tikzpicture}\thinspace\thinspace #1
 	%}
 	}{}
+	
+\titleformat{name=\subsection,numberless}%
+	{\bfseries\fontsize{13}{13}\sffamily}%
+	{}%
+	{0pt}{#1}{}
 	
 
 \titleformat{name=\subsubsection}[hang]%
