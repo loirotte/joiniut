@@ -9,13 +9,12 @@
 %% Généralités
 %%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{joinreport}
+\ProvidesClass{joinarticle}
 
 %\XeTeXdefaultencoding utf-8
 
 % On se base sur le report de KOMA-Script
-\LoadClass[a4paper,11pt]{scrreprt}
-%\LoadClass[a4paper,11pt]{scrbook}
+\LoadClass[a4paper,11pt]{scrartcl}
 
 % Des fontes qu'il faut charger de suite pour ne pas avoir d'erreurs
 % plus tard dans la compilation (même si elle ne sont pas utilisées
@@ -184,16 +183,16 @@
 %% En-têtes et pieds de porc
 %%
 
-\newcommand{\piedpage}[2][lightgray]{
-	\begin{tikzpicture}[baseline=-0.13cm]
-		\node[circle, draw=#1, fill, color=#1, text=black]{\bfseries#2};
-	\end{tikzpicture}
-}
+% \newcommand{\piedpage}[2][lightgray]{
+% 	\begin{tikzpicture}[baseline=-0.13cm]
+% 		\node[circle, draw=#1, fill, color=#1, text=black]{\bfseries#2};
+% 	\end{tikzpicture}
+% }
 
 
 % Pas de lignes noires moches
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
 
 % Juste le chapitre centré
 % \newcommand{\entetespiedspage}{%
@@ -203,32 +202,32 @@
 % 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
 % 	\fancyfoot[RO,LE]{\hspace*{-1.4cm}\piedpage{\thepage}\hspace*{-1.4cm}}%
 % }
-\newcommand{\entetespiedspage}{%
-	\fancyhead[L,C,R]{}
-	\fancyfoot[L,C,R]{}
-	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
-	\fancyfoot[RO]{\fatfont\footnotesize\hspace*{-1.3cm}\rightmark~~|~~\thepage\hspace*{-1.3cm}}%
-	\fancyfoot[LE]{\fatfont\footnotesize\hspace*{-1.3cm}\thepage~~|~~\leftmark\hspace*{-1.3cm}}%
-}
-\newcommand{\entetespiedspageplain}{%
-	\fancyhead[L,C,R]{}
-	\fancyfoot[L,C,R]{}
-	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
-	\fancyfoot[RO,LE]{\fatfont\footnotesize\hspace*{-1.3cm}\textbf{\thepage}\hspace*{-1.3cm}}%
-}
+% \newcommand{\entetespiedspage}{%
+% 	\fancyhead[L,C,R]{}
+% 	\fancyfoot[L,C,R]{}
+% 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
+% 	\fancyfoot[RO]{\fatfont\footnotesize\hspace*{-1.3cm}\rightmark~~|~~\thepage\hspace*{-1.3cm}}%
+% 	\fancyfoot[LE]{\fatfont\footnotesize\hspace*{-1.3cm}\thepage~~|~~\leftmark\hspace*{-1.3cm}}%
+% }
+% \newcommand{\entetespiedspageplain}{%
+% 	\fancyhead[L,C,R]{}
+% 	\fancyfoot[L,C,R]{}
+% 	\fancyfoot[LO,RE]{\small\textcolor{lightgray}\@author}
+% 	\fancyfoot[RO,LE]{\fatfont\footnotesize\hspace*{-1.3cm}\textbf{\thepage}\hspace*{-1.3cm}}%
+% }
 
 % On enlève tout en haut, on remplace par le nom du chapitre.
-\fancypagestyle{plain}{\entetespiedspageplain}
+%\fancypagestyle{plain}{\entetespiedspageplain}
 
 % Personnalisation du style par défaut
-\pagestyle{fancy}
+%\pagestyle{fancy}
 % Pas de titre de chapitre en majuscule
-\renewcommand{\chaptermark}[1]{%
-\markboth{{\chaptername\ \thechapter. #1}}{}}
-% Pas de titre de section en majuscule
-\renewcommand{\sectionmark}[1]{%
-\markright{{Section\ \thesection. #1}}{}}
-\entetespiedspage
+% \renewcommand{\chaptermark}[1]{%
+% \markboth{{\chaptername\ \thechapter. #1}}{}}
+% % Pas de titre de section en majuscule
+% \renewcommand{\sectionmark}[1]{%
+% \markright{{Section\ \thesection. #1}}{}}
+% \entetespiedspage
 
 
 
