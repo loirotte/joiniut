@@ -334,16 +334,16 @@
 \titleformat{\section}[display]%
 	{\bfseries\LARGE\sffamily }
 	{\begin{tikzpicture}[overlay]
-      \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-0.5cm,-0.4cm) rectangle (0.7cm,-1.2cm);
-      \draw[color=white] (0.11cm,-0.80cm) node { \fontsize{22}{22}\fatfont{}\thesection };
-      \draw[color=color3!50] (0.11cm,-0.1cm) node {};
+      \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-0.5cm,0.1cm) rectangle (0.7cm,-0.7cm);
+      \draw[color=white] (0.11cm,-0.30cm) node { \fontsize{22}{22}\fatfont{}\thesection };
+      \draw[color=color3!50] (0.11cm,0.4cm) node {};
     \end{tikzpicture}}%
-	{0cm}{\hspace*{1cm}#1}{}
+	{-5mm}{\hspace*{1cm}#1}{}
 
 \titleformat{name=\section,numberless}[display]%
 	{\bfseries\LARGE\sffamily }
 	{}%
-	{0cm}{#1}{}
+	{-1cm}{#1}{}
 
 
 \titleformat{\subsection}%
