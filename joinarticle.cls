@@ -41,6 +41,10 @@
 %\RequirePackage{fontspec,xltxtra,xunicode}
 \RequirePackage{fontspec,xltxtra}
 
+% Style des légendes de figure
+\renewcommand{\figureformat}{%
+  \footnotesize \figurename~\thefigure%
+}
 
 
 
