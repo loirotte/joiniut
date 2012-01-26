@@ -98,6 +98,7 @@
 % Ensemble de polices Phil
 \newcommand{\fontsphil}{
 	\setmainfont{Liberation Serif}
+%	\setmainfont[Scale=.85]{Ubuntu}
 	\setsansfont{Liberation Sans}
 	\setmonofont[Scale=.8]{Liberation Mono}
 	\newfontfamily{\hwfont}{Comic Sans MS}
