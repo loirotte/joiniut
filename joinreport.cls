@@ -94,6 +94,7 @@
 
 % Ensemble de polices Phil
 \newcommand{\fontsphil}{
+        \defaultfontfeatures{Mapping=tex-text}
 	\setmainfont{Liberation Serif}
 	\setsansfont{Liberation Sans}
 	\setmonofont[Scale=.8]{Liberation Mono}
@@ -118,6 +119,7 @@
 \DeclareOption{fontslinux}{\fontslinux}
 \DeclareOption{fontsmac}{\fontsmac}
 \ProcessOptions
+
 
 
 %%
@@ -426,4 +428,15 @@
 {{\sffamily\contentslabel{1.3em}}}
 {\hspace*{-1.3em}}
 {\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{colortoc}{\contentspage}}
+
+% Un hack pour récupérer les \textvisiblespace...
+
+\newfontfamily\FreeSerif{Free Serif}
+\newcommand{\mytextvisiblespace}{{\FreeSerif\textvisiblespace}}
+
+\makeatletter
+\let\mvd@textvisiblespace\textvisiblespace
+\def\textvisiblespace{{\FreeSerif\mvd@textvisiblespace}}
+\makeatother
+
 
