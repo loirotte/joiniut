@@ -431,7 +431,7 @@
 
 % Un hack pour récupérer les \textvisiblespace...
 
-\newfontfamily\FreeSerif{Free Serif}
+\newfontfamily\FreeSerif{FreeSerif}
 \newcommand{\mytextvisiblespace}{{\FreeSerif\textvisiblespace}}
 
 \makeatletter
