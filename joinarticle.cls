@@ -21,7 +21,12 @@
 % par tous les fichiers)
 \RequirePackage{amssymb}
 
-% Support du français
+% Support du français (à resélectionner si jamais un texte est à
+% écrire en anglais, ou si un texte contient les deux langues...
+
+% \RequirePackage[english,francais]{babel}
+% \selectlanguage{francais}
+
 \RequirePackage[francais]{babel}
 
 % Modification des titres
