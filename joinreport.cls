@@ -1,13 +1,14 @@
-%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % joinreport
 % (C) Jonathan Aceituno
 % You can do what you want with this, but if you say it is your work, then
 % you've got a problem with your mind.
-%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%
 %% Généralités
 %%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{joinreport}
 
@@ -125,6 +126,7 @@
 %%
 %% Couleurs
 %%
+
 \definecolor{colortt}{RGB}{245,190,0}
 \definecolor{colorcomment}{RGB}{130,130,130}
 \definecolor{colortoc}{RGB}{100,100,100}
@@ -144,6 +146,7 @@
 %%
 %% Listings de code
 %%
+
 \RequirePackage{listingsutf8}
 \lstset{%
         extendedchars=\true,
@@ -183,7 +186,7 @@
 
 
 %%
-%% En-têtes et pieds de porc
+%% En-têtes et pieds de page
 %%
 
 \newcommand{\piedpage}[2][lightgray]{
@@ -224,9 +227,11 @@
 
 % Personnalisation du style par défaut
 \pagestyle{fancy}
+
 % Pas de titre de chapitre en majuscule
 \renewcommand{\chaptermark}[1]{%
 \markboth{{\chaptername\ \thechapter. #1}}{}}
+
 % Pas de titre de section en majuscule
 \renewcommand{\sectionmark}[1]{%
 \markright{{Section\ \thesection. #1}}{}}
@@ -235,7 +240,7 @@
 
 
 %%
-%% Redéfinitions de style
+%% Redéfinitions de styles
 %%
 
 % Descriptions
@@ -267,7 +272,6 @@
 % Texte manuscrit
 \newcommand{\texthw}[1]{{\hwfont#1}}
 
-
 % Etiquette de flottant
 \newcommand{\captionfonts}{\sffamily}
 \makeatletter 
@@ -291,13 +295,10 @@
 
 
 
-
-
-
-
 %%
 %% Titres de sections
 %%
+
 \setcounter{secnumdepth}{3}
 
 \def\thesection{\arabic{section}}
@@ -315,24 +316,6 @@
     \end{tikzpicture}}%
 	{8pt}{#1}{}
 
-% \titleformat{\section}[display]%
-% 	{\bfseries\LARGE }
-% 	{\begin{tikzpicture}[overlay]
-%       \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-1.8cm,-0.2cm) rectangle (-0.3cm,-1.8cm);
-%       \draw[color=white] (-1.06cm,-1.45cm) node { \fontsize{32}{32}\fatfont{}\thesection };
-%       \draw[color=color3!50] (-1.02cm,-0.1cm) node {\tiny{}SECTION};
-%     \end{tikzpicture}}%
-% 	{0pt}{#1}{}
-	
-% \titleformat{\section}[display]%
-% 	{\bfseries\LARGE }
-% 	{\begin{tikzpicture}[overlay]
-%       \draw[rounded corners=5pt,draw=white,fill,top color=color3!30, bottom color=color3] (-1.5cm,-0.2cm) rectangle (-0.3cm,-1.4cm);
-%       \draw[color=white] (-0.89cm,-1.05cm) node { \fontsize{32}{32}\fatfont{}\thesection };
-%       \draw[color=color3!50] (-0.89cm,-0.1cm) node {\tiny{}SECTION};
-%     \end{tikzpicture}}%
-% 	{0pt}{#1}{}
-
 \titleformat{\section}[display]%
 	{\bfseries\LARGE\sffamily }
 	{\begin{tikzpicture}[overlay]
@@ -341,7 +324,6 @@
       \draw[color=color3!50] (0.11cm,-0.1cm) node {\sffamily\tiny{}SECTION};
     \end{tikzpicture}}%
 	{0cm}{\hspace*{1cm}#1}{}
-
 
 \titleformat{\subsection}%
 	{\bfseries\fontsize{13}{13}\sffamily}%
@@ -353,7 +335,6 @@
 	%}
 	}{}
 	
-
 \titleformat{name=\subsubsection}[hang]%
 %	{\sffamily\large}%
 	{\small\sffamily}%
@@ -373,8 +354,9 @@
 
 
 %%
-%% Page de garde
+%% Page de garde (non utilisé pour l'IUT)
 %%
+
 \definecolor{colortitle}{RGB}{255,209,187}
 \makeatletter
 \renewcommand{\maketitle}{
@@ -406,11 +388,10 @@
 
 
 
-
-
 %%
 %% Table des matières
 %%
+
 % Pas plus que les chapitres et les sections
 \setcounter{tocdepth}{2}
 
