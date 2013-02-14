@@ -1,13 +1,14 @@
-%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % joinreport
 % (C) Jonathan Aceituno
 % You can do what you want with this, but if you say it is your work, then
 % you've got a problem with your mind.
-%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%
 %% Généralités
 %%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{joinarticle}
 
@@ -50,7 +51,6 @@
 \renewcommand{\figureformat}{%
   \footnotesize \figurename~\thefigure%
 }
-
 
 
 %%
@@ -132,6 +132,7 @@
 %%
 %% Couleurs
 %%
+
 \definecolor{colortt}{RGB}{245,190,0}
 \definecolor{colorcomment}{RGB}{130,130,130}
 \definecolor{colortoc}{RGB}{100,100,100}
@@ -152,6 +153,7 @@
 %%
 %% Listings de code
 %%
+
 \RequirePackage{listingsutf8}
 \lstset{%
         extendedchars=\true,
@@ -299,13 +301,10 @@
 
 
 
-
-
-
-
 %%
 %% Titres de sections
 %%
+
 \setcounter{secnumdepth}{3}
 
 \def\thesection{\arabic{section}}
@@ -355,7 +354,6 @@
 	{}%
 	{-1cm}{#1}{}
 
-
 \titleformat{\subsection}%
 	{\bfseries\fontsize{13}{13}\sffamily}%
 	{}%
@@ -393,6 +391,7 @@
 %%
 %% Page de garde
 %%
+
 \definecolor{colortitle}{RGB}{255,209,187}
 \makeatletter
 \renewcommand{\maketitle}{
@@ -424,11 +423,10 @@
 
 
 
-
-
 %%
 %% Table des matières
 %%
+
 % Pas plus que les chapitres et les sections
 \setcounter{tocdepth}{2}
 
