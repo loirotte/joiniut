@@ -23,7 +23,12 @@
 % par tous les fichiers)
 \RequirePackage{amssymb}
 
-% Support du français
+% Support du français (à resélectionner si jamais un texte est à
+% écrire en anglais, ou si un texte contient les deux langues...
+
+% \RequirePackage[english,francais]{babel}
+% \selectlanguage{francais}
+
 \RequirePackage[francais]{babel}
 
 % Modification des titres
@@ -43,7 +48,10 @@
 %\RequirePackage{fontspec,xltxtra,xunicode}
 \RequirePackage{fontspec,xltxtra}
 
-
+% Style des légendes de figure
+\renewcommand{\figureformat}{%
+  \footnotesize \figurename~\thefigure%
+}
 
 
 %%
@@ -96,16 +104,22 @@
 % Ensemble de polices Phil
 \newcommand{\fontsphil}{
         \defaultfontfeatures{Mapping=tex-text}
-	\setmainfont{Liberation Serif}
+	\setmainfont{Linux Libertine O}
 	\setsansfont{Liberation Sans}
 	\setmonofont[Scale=.8]{Liberation Mono}
 	\newfontfamily{\hwfont}{Comic Sans MS}
 	\newfontfamily{\fatfont}{Arial Black}
 	\newfontfamily{\authorfont}{Liberation Serif}
-%        \fontspec[SmallCapsFont=LMRoman10 Caps]{Palatino}
-%        \fontspec[SmallCapsFeatures={Letters=SmallCaps}]{Liberation Serif}
         \fontspec[SmallCapsFont={Arial Black}]{Arial Black}
 }
+
+% Pour info, autres fontes possibles :
+%	\setmainfont{Droid Serif}
+%	\setmainfont{Liberation Serif}
+%	\setmainfont[Scale=.85]{Ubuntu}
+%	\setsansfont{Linux Biolinum O}
+%       \fontspec[SmallCapsFont=LMRoman10 Caps]{Palatino}
+%       \fontspec[SmallCapsFeatures={Letters=SmallCaps}]{Liberation Serif}
 
 % Voici le choix par défaut
 %\fontslinux

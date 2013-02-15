@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% joinreport
+% joinarticle
 % (C) Jonathan Aceituno
 % You can do what you want with this, but if you say it is your work, then
 % you've got a problem with your mind.
@@ -102,17 +102,23 @@
 
 % Ensemble de polices Phil
 \newcommand{\fontsphil}{
-	\setmainfont{Liberation Serif}
-%	\setmainfont[Scale=.85]{Ubuntu}
+        \defaultfontfeatures{Mapping=tex-text}
+        \defaultfontfeatures{Ligatures=TeX}
 	\setsansfont{Liberation Sans}
 	\setmonofont[Scale=.8]{Liberation Mono}
 	\newfontfamily{\hwfont}{Comic Sans MS}
 	\newfontfamily{\fatfont}{Arial Black}
 	\newfontfamily{\authorfont}{Liberation Serif}
-%        \fontspec[SmallCapsFont=LMRoman10 Caps]{Palatino}
-%        \fontspec[SmallCapsFeatures={Letters=SmallCaps}]{Liberation Serif}
         \fontspec[SmallCapsFont={Arial Black}]{Arial Black}
 }
+
+% Pour info, autres fontes possibles :
+%	\setmainfont{Droid Serif}
+%	\setmainfont{Liberation Serif}
+%	\setmainfont[Scale=.85]{Ubuntu}
+%	\setsansfont{Linux Biolinum O}
+%       \fontspec[SmallCapsFont=LMRoman10 Caps]{Palatino}
+%       \fontspec[SmallCapsFeatures={Letters=SmallCaps}]{Liberation Serif}
 
 % Voici le choix par défaut
 %\fontslinux
