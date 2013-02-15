@@ -200,7 +200,7 @@
 
 
 %%
-%% En-têtes et pieds de porc
+%% En-têtes et pieds de page
 %%
 
 % \newcommand{\piedpage}[2][lightgray]{
@@ -252,7 +252,7 @@
 
 
 %%
-%% Redéfinitions de style
+%% Redéfinitions de styles
 %%
 
 % Descriptions
@@ -396,7 +396,7 @@
 
 
 %%
-%% Page de garde
+%% Page de garde (non utilisé pour l'IUT)
 %%
 
 \definecolor{colortitle}{RGB}{255,209,187}
@@ -451,4 +451,15 @@
 {{\sffamily\contentslabel{1.3em}}}
 {\hspace*{-1.3em}}
 {\textcolor{lightgray}{\titlerule*[1pc]{.}}\textcolor{colortoc}{\contentspage}}
+
+% Un hack pour récupérer les \textvisiblespace...
+
+\newfontfamily\FreeSerif{FreeSerif}
+\newcommand{\mytextvisiblespace}{{\FreeSerif\textvisiblespace}}
+
+\makeatletter
+\let\mvd@textvisiblespace\textvisiblespace
+\def\textvisiblespace{{\FreeSerif\mvd@textvisiblespace}}
+\makeatother
+
 

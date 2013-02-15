@@ -104,6 +104,7 @@
 % Ensemble de polices Phil
 \newcommand{\fontsphil}{
         \defaultfontfeatures{Mapping=tex-text}
+        \defaultfontfeatures{Ligatures=TeX}
 	\setmainfont{Linux Libertine O}
 	\setsansfont{Liberation Sans}
 	\setmonofont[Scale=.8]{Liberation Mono}
@@ -152,6 +153,7 @@
 \definecolor{color3}{RGB}{104,142,255}
 %\definecolor{codebackground}{RGB}{248,248,248}
 \definecolor{codebackground}{RGB}{230,230,230}
+\definecolor{backgroundtitle}{RGB}{230,230,230}
 \definecolor{codekeywords}{RGB}{59,40,192}
 \definecolor{codestring}{RGB}{70,123,191}
 
