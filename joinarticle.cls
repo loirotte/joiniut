@@ -104,6 +104,7 @@
 \newcommand{\fontsphil}{
         \defaultfontfeatures{Mapping=tex-text}
         \defaultfontfeatures{Ligatures=TeX}
+	\setmainfont{Linux Libertine O}
 	\setsansfont{Liberation Sans}
 	\setmonofont[Scale=.8]{Liberation Mono}
 	\newfontfamily{\hwfont}{Comic Sans MS}
